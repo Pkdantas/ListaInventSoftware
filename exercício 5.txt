@@ -1,0 +1,21 @@
+public class MontanteJuros
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Montante: "+ObtenhaMontante(10000.00,0.03,3));
+            Console.WriteLine("Total de Juros: "+ObtenhaJuroTotal(ObtenhaMontante(10000.00,0.003,3.0),10000.00));
+        }
+
+        public static double ObtenhaMontante(double capitalInicial, double taxaJuro, double prazo)
+        {
+            return (capitalInicial*Math.Pow(1+taxaJuro,prazo));
+        }
+
+        public static double ObtenhaJuroTotal(double montante, double capitalInicial)
+        {
+            return (montante-capitalInicial);
+        }
+    }
+
+Montante: 10927,27
+Total de Juros: 927,27
